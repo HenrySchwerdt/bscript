@@ -6,6 +6,8 @@
         "tuple": "cpp",
         "type_traits": "cpp",
         "utility": "cpp",
-        "vector": "cpp"
-    }
+        "vector": "cpp",
+        "bs_ast.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

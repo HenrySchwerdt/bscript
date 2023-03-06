@@ -73,12 +73,15 @@ static void print_help()
     printf(" -o : option without arguments.\n");
     printf(" -h : print out command line options.\n\n");
 }
+static void repl() {
+    printf(">");
+}
 
 int main(int argc, const char *argv[])
 {
     if (argc == 1)
     {
-        // repl();
+        repl();
     }
     else if (argc >= 2)
     {
