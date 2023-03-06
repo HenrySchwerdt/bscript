@@ -1,0 +1,26 @@
+name: BScript CI
+
+on: 
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: xmake-io/github-action-setup-xmake@master
+    - name: build
+      run: xmake build bscript
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: xmake-io/github-action-setup-xmake@master
+    - name: build
+      run: |
+        xmake build test
+        xmake run test
+
